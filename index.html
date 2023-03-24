@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./StyleSheet.css" rel="StyleSheet">
+  <script defer src="./app.js"></script>
+  <title>Document</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <form action="">
+    <label for="browsers">Browser Select Dataset: </label>
+    <input list="browser" id="browsers" name="browsers">
+
+    <datalist id="browser">
+      <option value="Chrome">Chrome</option>
+      <option value="Firefox">Firefox</option>
+      <option value="Internet Explorer">Internet Explorer</option>
+      <option value="Microsoft Edge">Microsoft Edge</option>
+      <option value="Opera">Opera</option>
+    </datalist>
+  </form>
+  <form action="">
+    <br>
+    <br>
+    <br>
+    <select id="browserSel">
+      <option value="Chrome">Chrome</option>
+      <option value="Firefox">Firefox</option>
+      <option value="Internet Explorer">Internet Explorer</option>
+      <option value="Microsoft Edge">Microsoft Edge</option>
+      <option value="Opera">Opera</option>
+    </select>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form action="" style="width: 300px;">
+    <fieldset>
+      <legend style="background-color: black; color: white; padding: 10px;"><b>Chose Your Favorite Monster</b></legend>
+      <input type="radio" name="monster" id="monster1">
+      <label for="monster1">Kraken</label>
+      <br>
+      <input type="radio" name="monster" id="monster2">
+      <label for="monster2">Sasquach</label>
+      <br>
+      <input type="radio" name="monster" id="monster3">
+      <label for="monster3">Mothman</label>
+    </fieldset>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form action="">
+    <fieldset style="border: none">
+      <legend style="background-color: black; color: white; padding: 10px;">Choose your favorite color</legend>
+      <input type="radio" name="color" id="color1">
+      <label for="color1">Blue</label>
+      <br>
+      <input type="radio" name="color" id="color2">
+      <label for="color2">Green</label>
+      <br>
+      <input type="radio" name="color" id="color3">
+      <label for="color3">Pink</label>
+      <br>
+      <input type="radio" name="color" id="color4">
+      <label for="color4">Red</label>
+
+    </fieldset>
+    <fieldset style="border: none">
+      <legend style="background-color: black; color: white; padding: 10px;">Choose your favorite monster</legend>
+      <input type="radio" name="monster" id="monster1">
+      <label for="monster1">Kraken</label>
+      <br>
+      <input type="radio" name="monster" id="monster2">
+      <label for="monster2">Sasquach</label>
+      <br>
+      <input type="radio" name="monster" id="monster3">
+      <label for="monster3">Mothman</label>
+    </fieldset>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form action="">
+    <label for="meter1">Temperature: 0</label>
+    <meter value="100" min="0" max="120" id="meter1" optimum="75"></meter>120
+    <br>
+    <label for="meter2">Temperature: 0</label>
+    <meter value="30" min="0" max="120" id="meter2" optimum="75"></meter> 120
+    <br>
+    <label for="meter3">Temperature: 0</label>
+    <meter value="75" min="0" max="120" id="meter3" optimum="75"></meter>120
+  </form>
+  <br>
+  <br>
+  <br>
+  <form action="" oninput="output.value = parseInt(input1.value) + parseInt(input2.value)">
+      0 <input type="range" min="0" max="100" value="50" id="input1" style="background-color: white;"> 100 + 
+      <input type="number" id="input2" value="10"> = <output name="output" for="input1 input2">60</output>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form action="" oninput="output.value = parseInt(input1.value) * parseInt(input2.value)">
+      <input type="number" min="0" max="100" value="5" id="input1" style="background-color: white;"> * 
+      <input type="number" id="input2" value="2"> = <output name="output" for="input1 input2">10</output>
+  </form>
+  <br>
+  <br>
+  <br>
+  <script>
+    const meter = document.querySelectorAll('meter')
+
+    meter.forEach(meter => {
+      if (meter.value == 75) {
+        meter.style.color = "green"
+        console.log('hello')
+      }
+      else {
+        meter.style.backgroundColor = "yellow"
+      }
+    })
+  </script>
+</body>
+</html>
