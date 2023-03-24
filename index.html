@@ -88,13 +88,13 @@
   <br>
   <form action="">
     <label for="meter1">Temperature: 0</label>
-    <meter value="100" min="0" max="120" id="meter1" optimum="75"></meter>120
+    <meter value="100" min="0" max="120" id="meter1"low="50" high="90" optimum="75"></meter>120
     <br>
     <label for="meter2">Temperature: 0</label>
-    <meter value="30" min="0" max="120" id="meter2" optimum="75"></meter> 120
+    <meter value="30" min="0" max="120" id="meter2" low="50" high="90" optimum="75"></meter> 120
     <br>
     <label for="meter3">Temperature: 0</label>
-    <meter value="75" min="0" max="120" id="meter3" optimum="75"></meter>120
+    <meter value="75" min="0" max="120" id="meter3" low="50" high="90" optimum="75"></meter>120
   </form>
   <br>
   <br>
@@ -113,18 +113,5 @@
   <br>
   <br>
   <br>
-  <script>
-    const meter = document.querySelectorAll('meter')
-
-    meter.forEach(meter => {
-      if (meter.value == 75) {
-        meter.style.color = "green"
-        console.log('hello')
-      }
-      else {
-        meter.style.backgroundColor = "yellow"
-      }
-    })
-  </script>
 </body>
 </html>
